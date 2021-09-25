@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Randomizer</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="levels">
+                <div class="level_header">Choose Difficulty Level</div>
+                <button class="level_button" value="10">Easy</button>
+                <button class="level_button" value="50">Medium</buton>
+                <button class="level_button" value="100">Hard</button>
+            </div>
+
+            <button onclick="startGame()">Start</button>
+        </div>
+        <div class="content">
+            <div id="number">0</div>
+            <div class="numberTablet"></div>
+            <div class="number_buttons">
+                <button class="number_button" value="1">1</button>
+                <button class="number_button" value="2">2</button>
+                <button class="number_button" value="3">3</button>
+                <button class="number_button" value="4">4</button>
+                <button class="number_button" value="5">5</button>
+                <button class="number_button" value="6">6</button>
+                <button class="number_button" value="7">7</button>
+                <button class="number_button" value="8">8</button>
+                <button class="number_button" value="9">9</button>
+                <button class="number_button" value="0">0</button>
+            </div>
+
+            <form id="submitForm">
+
+                <input id="input_value" type="number" value="">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
