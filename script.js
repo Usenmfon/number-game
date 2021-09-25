@@ -55,9 +55,11 @@ for (let i = 0; i < level_buttons.length; i++) {
 
 handleChange = (result) => {
   if (result == randomize) {
+    input.value = "";
     modal.style.display = "block";
     alert_message.innerHTML = `Yea!!! You WIN. Congratulations`
   } else {
+    input.value = "";
     --trials;
     modal.style.display = "block";
     alert_message.innerHTML = `You have ${trials} trials remaining`
