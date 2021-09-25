@@ -1,7 +1,7 @@
 let content = document.querySelector(".content");
 let tablet = document.querySelector(".numberTablet");
 let menu = document.querySelector(".menu");
-let number = document.getElementById("number");
+let startNumber = document.getElementById("start_number");
 let container = document.querySelector(".container");
 let gameOver = document.createElement("div");
 let replay = document.createElement("button");
@@ -13,20 +13,20 @@ var btn = document.getElementById("myBtn")
 var span = document.getElementsByClassName("close")[0]
 var alert_message = document.getElementsByClassName("message")[0]
 let start = false;
-var rNumber;
-var randomize;
-var result;
+var randomNumber;
+var randomizedNumber;
+var userInput;
 var trials = 3;
 var speed;
 
 
 function startGame() {
-  if (!start && (rNumber != null)) {
+  if (!start && (randomNumber != null)) {
     content.style.display = "flex";
     menu.style.display = "none";
 
     countDown();
-    randNumber();
+    numberGenerator();
   }
 }
 
@@ -43,18 +43,18 @@ window.onclick = function(event){
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function (event) {
     input.value = input.value + event.currentTarget.value;
-    result = input.value;
+    userInput = input.value;
   });
 }
 
 for (let i = 0; i < level_buttons.length; i++) {
   level_buttons[i].addEventListener("click", function (event) {
-    rNumber = event.currentTarget.value;
+    randomNumber = event.currentTarget.value;
   });
 }
 
-handleChange = (result) => {
-  if (result == randomize) {
+handleInput = (userInput) => {
+  if (userInput == randomizedNumber) {
     input.value = "";
     modal.style.display = "block";
     alert_message.innerHTML = `Yea!!! You WIN. Congratulations`
@@ -84,27 +84,27 @@ replay.onclick = function(){
 
 document.getElementById("submitForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  handleChange(result);
+  handleInput(userInput);
   isGameOver(trials);
 });
 
-function randNumber() {
-  randomize = Math.floor(Math.random() * rNumber);
-  tablet.innerHTML = `Choose a number between 1 to ${rNumber}`;
+function numberGenerator() {
+  randomizedNumber = Math.floor(Math.random() * randomNumber);
+  tablet.innerHTML = `Choose a number between 1 to ${randomNumber}`;
 }
 
 const countDown = function () {
-  if (rNumber <= 10) {
+  if (randomNumber <= 10) {
     speed = 300;
-  } else if (rNumber <= 50) {
+  } else if (randomNumber <= 50) {
     speed = 100;
   } else {
     speed = 50;
   }
   setInterval(() => {
-    if (rNumber != 0) {
-      number.innerHTML = rNumber;
-      --rNumber;
+    if (randomNumber != 0) {
+      startNumber.innerHTML = randomNumber;
+      --randomNumber;
     }
   }, speed);
 };
