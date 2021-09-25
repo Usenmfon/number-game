@@ -30,10 +30,6 @@ function startGame() {
   }
 }
 
-// btn.onclick = function(){
-  // modal.style.display = "block";
-// }
-
 span.onclick = function() {
   modal.style.display = "none"
 }
@@ -65,7 +61,6 @@ handleChange = (result) => {
     --trials;
     modal.style.display = "block";
     alert_message.innerHTML = `You have ${trials} trials remaining`
-    // alert(`You have ${trials} trials remainingg`);
   }
 };
 
@@ -93,7 +88,6 @@ document.getElementById("submitForm").addEventListener("submit", function (e) {
 
 function randNumber() {
   randomize = Math.floor(Math.random() * rNumber);
-  console.log(randomize)
   tablet.innerHTML = `Choose a number between 1 to ${rNumber}`;
 }
 
