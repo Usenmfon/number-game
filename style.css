@@ -11,7 +11,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: solid red; */
     height: 95vh;
 }
 
@@ -35,13 +34,20 @@ button {
 }
 
 .menu {
-    /* border: solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* justify-content: center; */
     height: 80vh;
+}
+
+.heart {
+    color: red;
+}
+
+.menu_footer {
+    font-weight: 900;
+    word-spacing: .4em;
 }
 
 .levels {
