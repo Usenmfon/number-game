@@ -102,6 +102,8 @@ button:active {
 
 .number_buttons {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     width: 75%;
     height: 50vh;
@@ -141,6 +143,7 @@ button:active {
     right: auto;
     width: 80%;
     height: 30%;
+    font-size: 2rem;
     overflow: auto;
     border-radius: 4px;
     background-color: #0f5153;
@@ -158,7 +161,8 @@ button:active {
 .close {
     color: rgb(212, 100, 100);
     float: right;
-    font-size: 28px;
+    font-size: 2.5rem;
+    margin-right: 1rem;
     font-weight: bolder;
 }
 
@@ -173,4 +177,113 @@ button:active {
     text-align: center;
     margin: .6em;
     color: white;
+}
+
+#myBtn {
+    background: #0f5153;
+}
+
+@media only screen and (min-width: 768px) {
+    .content {
+        height: 92vh;
+    }
+    .menu {
+        width: 50vw;
+    }
+    .level_header {
+        font-size: 2em;
+    }
+    .levels button {
+        margin-top: 1em;
+        width: 13em;
+        height: 2.5em;
+    }
+    .menu_footer {
+        font-size: 1.5em;
+    }
+    #start_button {
+        width: 6.5em;
+    }
+    .number_button {
+        width: 9em;
+        height: 3em;
+    }
+    .number_buttons button {
+        margin-left: 2.5em;
+    }
+    .number_buttons button:last-child {
+        margin: 0 14.5em;
+    }
+    .numberTablet {
+        padding-top: 2em;
+        height: 2.5em;
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+    input {
+        height: 2.2em;
+        width: 8.5em;
+    }
+    #myBtn {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .gameOver {
+        height: 89vh;
+        font-size: 3em;
+    }
+    .replay {
+        width: 8em;
+        height: 4em;
+        font-size: 1em;
+    }
+    input {
+        width: 14em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .numberTablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        font-size: 2em;
+        width: 18em;
+    }
+    .levels button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+    #start_button {
+        width: 11rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+    }
+    .number_button {
+        width: 10em;
+        height: 4em;
+    }
+    .number_buttons button {
+        font-size: 1.1em;
+    }
+    input {
+        width: 18em;
+        height: 2.5em;
+        font-size: 1.5rem;
+    }
+    #myBtn {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    .replay {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .number_button {
+        width: 12em;
+    }
 }
