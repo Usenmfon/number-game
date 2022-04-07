@@ -30,8 +30,12 @@ function startGame() {
   }
 }
 
+console.log(randomizedNumber)
+
 span.onclick = function() {
-  modal.style.display = "none"
+  if(userInput == randomizedNumber){
+    window.location.reload()
+  }modal.style.display = "none"
 }
 
 window.onclick = function(event){
@@ -73,7 +77,8 @@ const isGameOver = (val) => {
     replay.classList.add("replay")
     replay.textContent = "Replay?"
     gameOver.classList.add("gameOver");
-    gameOver.textContent = "Game Over";
+    gameOver.textContent = `Game
+     Over!!! Correct Number: ${randomizedNumber}`;
     content.style.display = "none";
   }
 };
@@ -90,9 +95,8 @@ document.getElementById("submitForm").addEventListener("submit", function (e) {
 
 function numberGenerator() {
   randomizedNumber = Math.floor(Math.random() * randomNumber);
-  tablet.innerHTML = `Choose a number between 1 to ${randomNumber}`;
+  tablet.innerHTML = `Choose a number between 1 to ${randomNumber}`; 
 }
-
 const countDown = function () {
   if (randomNumber <= 10) {
     speed = 300;
